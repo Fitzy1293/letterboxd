@@ -50,7 +50,6 @@ def getReviews(user, reviewMovies):
 
 userDict = {}
 
-user = 'daqoon'
 baseUrl = f'https://letterboxd.com/{user}/films/'
 bases = (f'{baseUrl}page/', f'{baseUrl}reviews/page/')
 watched = allMovies(user, bases[0])
