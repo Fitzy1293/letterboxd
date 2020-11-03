@@ -1,10 +1,15 @@
 #!/bin/env python3
 
+'''
+Letterboxd does not really have an API.
+'''
+
+
 
 import requests
+import sys
 from bs4 import BeautifulSoup
 from pprint import pprint
-import unicodedata
 
 def moviesOnPage(url):
     html_text = requests.get(url).text
@@ -18,7 +23,6 @@ def moviesOnPage(url):
         movieList.append(movie[0])
 
     return movieList
-
 
 def allMovies(user, base):
     page = 1
@@ -50,6 +54,7 @@ def getReviews(user, reviewMovies):
 
 userDict = {}
 
+user = sys.argv[1]
 baseUrl = f'https://letterboxd.com/{user}/films/'
 bases = (f'{baseUrl}page/', f'{baseUrl}reviews/page/')
 watched = allMovies(user, bases[0])
