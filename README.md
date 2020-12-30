@@ -1,7 +1,7 @@
 
 # letterboxd
 
-![Redlettermedia example](https://i.imgur.com/T07eVzJ.mp4)
+![Redlettermedia example](./geta-all-example.gif)
 
 python3 movies.py
 
