@@ -1,10 +1,11 @@
 
 # letterboxd
 
+![Redlettermedia example](https://i.imgur.com/T07eVzJ.mp4)
+
 python3 movies.py
 
-optional arguments:
-
+Arguments
 
   `--user USER` `-u USER`   letterboxd.com user
 
