@@ -50,10 +50,12 @@ def getReviewUrls(user):
     pageDiv = str(soup.find("div", {'class': "pagination"}))
     sleep(.05)
     try:
-        lastValidPage = int(pageDiv.split('/films/reviews/page/')[-1][0])
+        lastValidPage = int(pageDiv.split('/films/reviews/page/')[-1].split('/')[0])
+        print(lastValidPage)
         return [f'{reviewsBaseUrl}page/{str(i)}' for i in range(1, lastValidPage + 1)]
 
     except ValueError:
+
         return [reviewsBaseUrl]
 
 
