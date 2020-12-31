@@ -154,9 +154,9 @@ def writeReviews(reviewsDict={}):
 
     with open(fname, 'w+') as f:
         f.write('<!DOCTYPE html>\n')
+        f.write('<html>\n')
         f.write('<head>\n')
         f.write('</head>\n')
-        f.write('<html>\n')
         f.write('<body>\n')
 
         f.write(f'<h1>{user} - letterboxd.com reviews </h1>\n<br>')
